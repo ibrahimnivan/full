@@ -1,0 +1,12 @@
+.background-slider {
+  background-image: url('/bg-slider/bg-1.jpg'); /* Sesuaikan dengan nama gambar Anda */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+

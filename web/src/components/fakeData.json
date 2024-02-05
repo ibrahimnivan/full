@@ -1,0 +1,91 @@
+{
+  "code": 200,
+  "message": "success",
+  "data": [
+      {
+          "id": 8,
+          "eventName": "bujang inam",
+          "price": 66,
+          "date": "2024-02-03T14:17:00.000Z",
+          "location": "Denpasar",
+          "description": "bujang inamm",
+          "availableSeat": 66,
+          "userId": 1,
+          "image": "IMG1706364888040.jpg",
+          "organizerId": 1,
+          "category": "kuda",
+          "transaction": 0,
+          "eventAttendatGoal": 70,
+          "createdAt": "2024-01-27T14:14:48.060Z",
+          "attendant": 1
+      },
+      {
+          "id": 9,
+          "eventName": "gorila",
+          "price": 1000000,
+          "date": "2024-02-03T07:20:00.000Z",
+          "location": "Denpasar",
+          "description": "gorila lawan kong",
+          "availableSeat": 45,
+          "userId": 1,
+          "image": "IMG1706365263467.jpg",
+          "organizerId": 1,
+          "category": "Music",
+          "transaction": 0,
+          "eventAttendatGoal": 70,
+          "createdAt": "2024-01-27T14:21:03.481Z",
+          "attendant": 6
+      }
+  ],
+  "data2": [
+      {
+          "eventId": 8,
+          "organizerId": 1,
+          "event": {
+              "id": 8,
+              "eventName": "bujang inam",
+              "price": 66,
+              "date": "2024-02-03T14:17:00.000Z",
+              "location": "Denpasar",
+              "description": "bujang inamm",
+              "availableSeat": 66,
+              "userId": 1,
+              "image": "IMG1706364888040.jpg",
+              "organizerId": 1,
+              "category": "kuda",
+              "transaction": 0,
+              "eventAttendatGoal": 70,
+              "createdAt": "2024-01-27T14:14:48.060Z",
+              "attendant": 1,
+              "participants": [
+                  {
+                      "transaction": 66,
+                      "transactionTime": "2024-01-29T00:50:57.502Z"
+                  }
+              ]
+          }
+      },
+      {
+          "eventId": 9,
+          "organizerId": 1,
+          "event": {
+              "id": 9,
+              "eventName": "gorila",
+              "price": 1000000,
+              "date": "2024-02-03T07:20:00.000Z",
+              "location": "Denpasar",
+              "description": "gorila lawan kong",
+              "availableSeat": 45,
+              "userId": 1,
+              "image": "IMG1706365263467.jpg",
+              "organizerId": 1,
+              "category": "Music",
+              "transaction": 0,
+              "eventAttendatGoal": 70,
+              "createdAt": "2024-01-27T14:21:03.481Z",
+              "attendant": 6,
+              "participants": []
+          }
+      }
+  ]
+}

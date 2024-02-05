@@ -1,0 +1,72 @@
+[
+  {
+    "title": "Event 1",
+    "image": "event_image.jpg",
+    "date": { "day": "Fri", "date": "2", "month": "Feb" },
+    "fee": 20.99,
+    "location": "Venue A"
+  },
+  {
+    "title": "Event 2",
+    "image": "event_image.jpg",
+    "date": { "day": "Fri", "date": "10", "month": "Feb" },
+    "fee": "Free",
+    "location": "Venue B"
+  },
+  {
+    "title": "Event 3",
+    "image": "event_image.jpg",
+    "date":{ "day": "Fri", "date": "10", "month": "Feb" },
+    "fee": 15.5,
+    "location": "Venue C"
+  },
+  {
+    "title": "Event 4",
+    "image": "event_image.jpg",
+    "date": { "day": "Fri", "date": "10", "month": "Feb" },
+    "fee": "Free",
+    "location": "Venue D"
+  },
+  {
+    "title": "Event 5",
+    "image": "event_image.jpg",
+    "date": { "day": "Fri", "date": "10", "month": "Feb" },
+    "fee": 30.0,
+    "location": "Venue E"
+  },
+  {
+    "title": "Event 6",
+    "image": "event_image.jpg",
+    "date": { "day": "Fri", "date": "10", "month": "Feb" },
+    "fee": "Free",
+    "location": "Venue F"
+  },
+  {
+    "title": "Event 7",
+    "image": "event_image.jpg",
+    "date": { "day": "Fri", "date": "2", "month": "Feb" },
+    "fee": 25.99,
+    "location": "Venue G"
+  },
+  {
+    "title": "Event 8",
+    "image": "event_image.jpg",
+    "date": { "day": "Fri", "date": "2", "month": "Feb" },
+    "fee": "Free",
+    "location": "Venue H"
+  },
+  {
+    "title": "Event 9",
+    "image": "event_image.jpg",
+    "date": { "day": "Fri", "date": "2", "month": "Feb" },
+    "fee": 18.0,
+    "location": "Venue I"
+  },
+  {
+    "title": "Event 10",
+    "image": "event_image.jpg",
+    "date": { "day": "Fri", "date": "2", "month": "Feb" },
+    "fee": "Free",
+    "location": "Venue J"
+  }
+]

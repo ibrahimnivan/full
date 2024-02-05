@@ -1,0 +1,90 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  username  String
+  role      String  
+  email String
+  password String
+  referral   Int? @unique
+  points     Int  @default(0) 
+  pointsExpiration DateTime? 
+  events    EventParticipants[]
+  eventOrganizer EventOrganizers[]
+  discount Boolean?
+  discountExpiration DateTime?  
+  review Review[]
+  
+}
+
+model Event {
+  id            Int       @id @default(autoincrement())
+  eventName     String
+  price         Int
+  date          DateTime
+  location      String
+  description   String
+  availableSeat Int
+  review Review[]
+
+  participants  EventParticipants[]   
+  userId        Int?
+  image String? @default("image.jpg")
+
+  organizer    EventOrganizers[]
+  organizerId   Int?
+
+  category    String
+  transaction Int @default(0)
+  eventAttendatGoal Int? @default(70)
+
+  createdAt     DateTime  @default(now())
+  attendant     Int       @default(0) 
+}
+
+model EventOrganizers {
+  eventId      Int
+  organizerId  Int
+
+  event        Event    @relation(fields: [eventId], references: [id])
+  organizer    User     @relation(fields: [organizerId], references: [id])
+
+  @@id([eventId, organizerId])
+}
+
+// Define the relationship between events and participants
+model EventParticipants {
+  eventId      Int
+  userId       Int
+  transaction  Int @default(0)
+  transactionTime DateTime @default(now())
+
+  event        Event   @relation(fields: [eventId], references: [id])
+  participant  User    @relation(fields: [userId], references: [id])
+
+  @@id([eventId, userId])
+}
+
+model Review {
+  eventId       Int
+  userId        Int
+  rating        String       // Rating can be a numeric value, e.g., 1 to 5
+  reviewText    String?
+  createdAt     DateTime  @default(now())
+
+  event         Event   @relation(fields: [eventId], references: [id])
+  user          User    @relation(fields: [userId], references: [id])
+
+  @@id([eventId, userId])
+}
+

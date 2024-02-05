@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Review</title>
+</head>
+
+<body>
+    <h1>Hai {{username}} Give Us Rating and Review for {{eventName}} Event</h1>
+
+    <form action="http://localhost:8000/api/event/review" method="post">
+        <label for="rating">Rating:</label>
+        <select id="rating" name="rating">
+            <option value="A">sangat baik</option>
+            <option value="B">baik</option>
+            <option value="C">cukup</option>
+            <option value="D">buruk</option>
+            <option value="E">sangat buruk</option>
+        </select>
+
+        <label for="review">Review:</label>
+        <textarea id="review" name="reviewText" rows="4" cols="50"></textarea>
+
+        <!-- include hidden input fields for event and user IDs -->
+        <input type="hidden" name="eventId" value="{{eventId}}" /> 
+        <input type="hidden" name="userId" value="{{userId}}" /> 
+
+        <br>
+
+        <button type="submit">Submit Review</button>
+    </form>
+</body>
+
+</html>
